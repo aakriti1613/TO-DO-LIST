@@ -122,12 +122,22 @@
         }
 
         #projects .card {
-            margin: 5px;
+            margin: 8%;
             justify-content: space-around;
             text-align: center;
-            background-color: palevioletred;
-            color: aliceblue;
-            margin-top: 20px;
+            margin-top: 40px;
+            height: 250px;
+            border-radius: 20px;
+            padding: 9%;
+        }
+
+        #projects .card:hover {
+            transform: scale(1.05);
+        }
+
+        .cardimg {
+            height: 130px;
+            width: 150px;
         }
     </style>
 </head>
@@ -144,7 +154,6 @@
             <li><a href="#comptask" onclick="showCompletedTask(),toggleMenu()">Completed</a></li>
             <li><a href="#projects" onclick="showprojects(),toggleMenu()">My Lists</a></li>
         </ul>
-        <i href="#profile" class=" fa-solid fa-user"></i>
     </nav>
 
     <div class="container-fluid manager" id="home">
@@ -223,26 +232,68 @@
         </div>
     </div>
 
-    <div id="projects" style="display: none;">
-        <div class="d-flex ">
-            <div class="col-sm-12 col-md-3 col-lg-4 ">
+    <div id="projects" style="display: none;" class="container-fluid">
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 ">
                 <div class="card">
+                    <h3 class="card-title">Health</h3>
                     <div class="card-body justify-content-center">
-                        Health
+                        <img src="Images/336-3360045_icon2-health-insurance-icon-green-clipart.png" alt=""
+                            class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="card">
-                    <div class="card-body">
-                        Shopping
+                    <h3 class="card-title">Shopping</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/shop-icon-md.png" alt="" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-4">
+            <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="card">
-                    <div class="card-body">
-                        <i class="fa-solid fa-plus"></i>
+                    <h3 class="card-title">Goals</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/449602-middle.png" alt="loading" class="card-img cardimg img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <h3 class="card-title">Home</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/th.jpeg" alt="loading" class="card-img cardimg img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <h3 class="card-title">Work</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/pink-desk-office-room_684058-1038.avif" alt="loading"
+                            class="card-img cardimg img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <h3 class="card-title">Self</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/isolated-pink-vector-human-head-silhouette-logo-forefinger-image-creative-brain-intelligent-person-symbol-smart-man-headphones-167047529.webp"
+                            alt="loading" class="card-img cardimg img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <h3 class="card-title">Add list</h3>
+                    <div class="card-body justify-content-center">
+                        <img src="Images/add.jpeg" alt="loading" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
@@ -276,17 +327,17 @@
                         <div class="mb-1">
                             <label for="addTaskTextArea" class="form-label">Task/Description</label>
                             <textarea class="form-control" id="addTaskTextArea" name="taskDescription" rows="3"
-                                placeholder="Add your task"></textarea>
+                                placeholder="Add your task" required></textarea>
                         </div>
                         <div class="mb-1">
                             <label for="addResponsiblePerson" class="form-label">Responsible</label>
                             <input type="text" class="form-control" id="addResponsiblePerson"
-                                name="taskResponsiblePerson" placeholder="e.g. Me">
+                                name="taskResponsiblePerson" placeholder="e.g. Me" required>
                         </div>
                         <div class="mb-1">
                             <label for="addTaskResponsible" class="form-label">ETA</label>
                             <input type="datetime-local" class="form-control" id="addETA" name="taskETA"
-                                placeholder="Click to Add time">
+                                placeholder="Click to Add time" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -401,63 +452,85 @@
         }
 
         function addTask() {
-            console.log('Add Task clicked')
-            $("#addTaskModal").modal("hide")
+            var taskDescription = $('#addTaskTextArea').val().trim();
+            var taskResponsiblePerson = $('#addResponsiblePerson').val().trim();
+            var taskETA = $('#addETA').val();
+
+            if (!taskDescription) {
+                alert("Task description cannot be empty!");
+                $("#addTaskModal").modal("show");
+                return;
+            }
+            if (!taskResponsiblePerson) {
+                alert("Responsible person cannot be empty!");
+                $("#addTaskModal").modal("show");
+                return;
+            }
+            if (!taskETA) {
+                alert("Due date cannot be empty!");
+                $("#addTaskModal").modal("show");
+                return;
+            }
+            $("#addTaskModal").modal("hide");
             var dataArr = $("#taskInputForm").serializeArray();
-            var taskObject = new Object();
+            var taskObject = { taskId: Date.now() };
             var storageObjectArr = [];
             var storageObject = localStorage.getItem('taskstorage');
-            for (var i in dataArr) {
-                var name = dataArr[i]['name']
-                var value = dataArr[i]['value']
-                taskObject[name] = value
+
+            dataArr.forEach(function (item) {
+                taskObject[item.name] = item.value;
+            });
+
+            if (storageObject) {
+                storageObjectArr = JSON.parse(storageObject);
             }
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                storageObjectArr = JSON.parse(storageObject)
-                storageObjectArr.push(taskObject)
-            }
-            else {
-                storageObjectArr.push(taskObject)
-            }
-            localStorage.setItem('taskstorage', JSON.stringify(storageObjectArr))
-            createHtmlfromstorage()
-            $("#taskInputForm").trigger('reset')
+            storageObjectArr.push(taskObject);
+
+            localStorage.setItem('taskstorage', JSON.stringify(storageObjectArr));
+
+            createHtmlfromstorage();
+            $("#taskInputForm").trigger('reset');
         }
 
+
         function createHtmlfromstorage() {
-            var storageObjectArr = [];
             var storageObject = localStorage.getItem('taskstorage');
-            var storageObjectArr = JSON.parse(storageObject)
-            var html;
-            console.log(storageObjectArr)
+            var storageObjectArr = storageObject ? JSON.parse(storageObject) : [];
+            var taskHtml = '';
+            var delayedHtml = '';
+
             if (storageObject != null && storageObject != undefined && storageObject != '') {
                 if (storageObjectArr && storageObjectArr.length > 0) {
                     for (let i in storageObjectArr) {
-                        var date = new Date(storageObjectArr[i]['taskETA'])
+                        var date = new Date(storageObjectArr[i]['taskETA']);
                         if (isPastDate(date)) {
-                            html = html + '<tr>'
-                                + '<td><i class="btn  fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone() ,markAsDone(' + i + ')"></i></td>'
+                            var rowHtml = '<tr>'
+                                + '<td><i class="fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone(), markAsDone(' + i + ')"></i></td>'
                                 + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskDescription'] + "</td>"
                                 + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskResponsiblePerson'] + "</td>"
                                 + '<td style="color:red;" onclick="editTask(' + i + ')">' + date.toUTCString() + '</td>'
-                                + '<td><i class="btn fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>'
-                            delayedtask(i, storageObjectArr)
-                        }
-                        else {
-                            html = html + '<tr>'
-                                + '<td><i class="btn  fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone() ,markAsDone(' + i + ')"></i></td>'
+                                + '<td><i class="fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>'
+                            delayedHtml += rowHtml;
+                            taskHtml += rowHtml;
+                        } else {
+                            var rowHtml = '<tr>'
+                                + '<td><i class="fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone(), markAsDone(' + i + ')"></i></td>'
                                 + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskDescription'] + "</td>"
                                 + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskResponsiblePerson'] + "</td>"
                                 + '<td onclick="editTask(' + i + ')">' + date.toUTCString() + '</td>'
-                                + '<td><i class="btn fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>'
+                                + '<td><i class=" fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>';
+                            taskHtml += rowHtml;
                         }
                     }
                 }
-                else {
-                    html = '<tr><td colspan="5"> No Tasks Added yet</td></tr>'
-                }
             }
-            $("#taskTableBody").html(html)
+            else {
+                taskHtml = '<tr><td colspan="5">No Tasks Added yet</td></tr>';
+                delayedHtml = '<tr><td colspan="5">No Delayed Tasks</td></tr>';
+            }
+
+            $("#taskTableBody").html(taskHtml);
+            $("#delaytaskTableBody").html(delayedHtml);
         }
 
         function completedtask(index, storageObjectArr) {
@@ -472,19 +545,6 @@
             }
             else { html = '<tr><td colspan="5">No Tasks completed yet</td></tr>' }
             $("#comptaskTableBody").html(html)
-        }
-
-        function delayedtask(i, storageObjectArr) {
-            var date = new Date(storageObjectArr[i]['taskETA'])
-            var html;
-            html = html + '<tr>'
-                + '<td><i class="btn  fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone() ,markAsDone(' + i + ')"></i></td>'
-                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskDescription'] + "</td>"
-                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskResponsiblePerson'] + "</td>"
-                + '<td style="color:red;" onclick="editTask(' + i + ')">' + date.toUTCString() + '</td>'
-                + '<td><i class="btn fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>'
-
-            $("#delaytaskTableBody").html(html)
         }
 
         function markAsDone(index) {
