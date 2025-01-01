@@ -5,141 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link href="vendor/bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome/fontawesome-free-6.5.2-web/css/all.css">
-    <style>
-        body {
-            background-color: whitesmoke;
-
-            font-family: 'Poppins', sans-serif;
-        }
-
-        nav {
-            padding: 10px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: rgb(45, 198, 245);
-            font-family: 'Times New Roman', Times, serif;
-            position: relative;
-            z-index: 1000;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        nav ul {
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            list-style-type: none;
-            margin: 17px;
-            font-size: 19px;
-            vertical-align: middle;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-
-        }
-
-        nav ul li a:hover {
-            color: rgb(120, 120, 226);
-            cursor: pointer;
-        }
-
-        .menu-icon i {
-            color: #fff;
-            font-size: 30px;
-        }
-
-        @media (max-width:1200px) {
-            nav ul {
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                text-align: center;
-                background: rgb(45, 198, 245);
-                gap: 0;
-                overflow: hidden;
-            }
-
-
-            .menu-icon {
-                display: block;
-            }
-
-            #menuList {
-                transition: all 0.5s;
-            }
-        }
-
-        i {
-            color: aliceblue;
-        }
-
-        i:hover {
-            color: aliceblue;
-        }
-
-        .btn {
-            color: aliceblue;
-        }
-
-        button {
-            color: aliceblue;
-        }
-
-        button:hover {
-            color: aliceblue;
-        }
-
-        .manager button {
-            color: aliceblue;
-        }
-
-        .manager button:hover {
-            color: aliceblue;
-        }
-
-        .manager {
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .card {
-            margin-top: 30px;
-        }
-
-        #projects .card {
-            margin: 8%;
-            justify-content: space-around;
-            text-align: center;
-            margin-top: 40px;
-            height: 250px;
-            border-radius: 20px;
-            padding: 9%;
-        }
-
-        #projects .card:hover {
-            transform: scale(1.05);
-        }
-
-        .cardimg {
-            height: 130px;
-            width: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="To_do_list.css">
 </head>
 
 <body>
@@ -238,7 +107,7 @@
                 <div class="card">
                     <h3 class="card-title">Health</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/336-3360045_icon2-health-insurance-icon-green-clipart.png" alt=""
+                        <img src="assets/336-3360045_icon2-health-insurance-icon-green-clipart.png" alt=""
                             class="card-img cardimg img-fluid">
                     </div>
                 </div>
@@ -247,7 +116,7 @@
                 <div class="card">
                     <h3 class="card-title">Shopping</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/shop-icon-md.png" alt="" class="card-img cardimg img-fluid">
+                        <img src="assets/shop-icon-md.png" alt="" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
@@ -255,7 +124,7 @@
                 <div class="card">
                     <h3 class="card-title">Goals</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/449602-middle.png" alt="loading" class="card-img cardimg img-fluid">
+                        <img src="assets/449602-middle.png" alt="loading" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
@@ -264,7 +133,7 @@
                 <div class="card">
                     <h3 class="card-title">Home</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/th.jpeg" alt="loading" class="card-img cardimg img-fluid">
+                        <img src="assets/th.jpeg" alt="loading" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
@@ -273,7 +142,7 @@
                 <div class="card">
                     <h3 class="card-title">Work</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/pink-desk-office-room_684058-1038.avif" alt="loading"
+                        <img src="assets/pink-desk-office-room_684058-1038.avif" alt="loading"
                             class="card-img cardimg img-fluid">
                     </div>
                 </div>
@@ -283,7 +152,7 @@
                 <div class="card">
                     <h3 class="card-title">Self</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/isolated-pink-vector-human-head-silhouette-logo-forefinger-image-creative-brain-intelligent-person-symbol-smart-man-headphones-167047529.webp"
+                        <img src="assets/isolated-pink-vector-human-head-silhouette-logo-forefinger-image-creative-brain-intelligent-person-symbol-smart-man-headphones-167047529.webp"
                             alt="loading" class="card-img cardimg img-fluid">
                     </div>
                 </div>
@@ -293,7 +162,7 @@
                 <div class="card">
                     <h3 class="card-title">Add list</h3>
                     <div class="card-body justify-content-center">
-                        <img src="Images/add.jpeg" alt="loading" class="card-img cardimg img-fluid">
+                        <img src="assets/add.jpeg" alt="loading" class="card-img cardimg img-fluid">
                     </div>
                 </div>
             </div>
@@ -389,219 +258,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
         integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
-    <script>
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu() {
-            if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "320px";
-            }
-            else {
-                menuList.style.maxHeight = "0px";
-            }
-        }
-
-        createHtmlfromstorage();
-
-        function showAddTaskModal() {
-            $("#addTaskModal").modal('show');
-        }
-
-        function showTaskDone() {
-            $("#TaskDone").modal('show');
-        }
-
-        function showCompletedTask() {
-            document.getElementById("home").style.display = "none";
-            document.getElementById("comptask").style.display = "block";
-            document.getElementById("delaytask").style.display = "none";
-            document.getElementById("projects").style.display = "none";
-        }
-
-        function showdelayedTask() {
-            document.getElementById("home").style.display = "none";
-            document.getElementById("delaytask").style.display = "block";
-            document.getElementById("comptask").style.display = "none";
-            document.getElementById("projects").style.display = "none";
-        }
-
-        function showprojects() {
-            document.getElementById("home").style.display = "none";
-            document.getElementById("projects").style.display = "block";
-            document.getElementById("delaytask").style.display = "none";
-            document.getElementById("comptask").style.display = "none";
-        }
-
-        function showhome() {
-            document.getElementById("home").style.display = "block";
-            document.getElementById("comptask").style.display = "none";
-            document.getElementById("delaytask").style.display = "none";
-            document.getElementById("projects").style.display = "none";
-        }
-
-        function isPastDate(taskDateStr) {
-            var taskDate = new Date(taskDateStr);
-            var currentDate = new Date();
-            if (taskDate < currentDate) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        function addTask() {
-            var taskDescription = $('#addTaskTextArea').val().trim();
-            var taskResponsiblePerson = $('#addResponsiblePerson').val().trim();
-            var taskETA = $('#addETA').val();
-
-            if (!taskDescription) {
-                alert("Task description cannot be empty!");
-                $("#addTaskModal").modal("show");
-                return;
-            }
-            if (!taskResponsiblePerson) {
-                alert("Responsible person cannot be empty!");
-                $("#addTaskModal").modal("show");
-                return;
-            }
-            if (!taskETA) {
-                alert("Due date cannot be empty!");
-                $("#addTaskModal").modal("show");
-                return;
-            }
-            $("#addTaskModal").modal("hide");
-            var dataArr = $("#taskInputForm").serializeArray();
-            var taskObject = { taskId: Date.now() };
-            var storageObjectArr = [];
-            var storageObject = localStorage.getItem('taskstorage');
-
-            dataArr.forEach(function (item) {
-                taskObject[item.name] = item.value;
-            });
-
-            if (storageObject) {
-                storageObjectArr = JSON.parse(storageObject);
-            }
-            storageObjectArr.push(taskObject);
-
-            localStorage.setItem('taskstorage', JSON.stringify(storageObjectArr));
-
-            createHtmlfromstorage();
-            $("#taskInputForm").trigger('reset');
-        }
 
 
-        function createHtmlfromstorage() {
-            var storageObject = localStorage.getItem('taskstorage');
-            var storageObjectArr = storageObject ? JSON.parse(storageObject) : [];
-            var taskHtml = '';
-            var delayedHtml = '';
-
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                if (storageObjectArr && storageObjectArr.length > 0) {
-                    for (let i in storageObjectArr) {
-                        var date = new Date(storageObjectArr[i]['taskETA']);
-                        if (isPastDate(date)) {
-                            var rowHtml = '<tr>'
-                                + '<td><i class="fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone(), markAsDone(' + i + ')"></i></td>'
-                                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskDescription'] + "</td>"
-                                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskResponsiblePerson'] + "</td>"
-                                + '<td style="color:red;" onclick="editTask(' + i + ')">' + date.toUTCString() + '</td>'
-                                + '<td><i class="fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>'
-                            delayedHtml += rowHtml;
-                            taskHtml += rowHtml;
-                        } else {
-                            var rowHtml = '<tr>'
-                                + '<td><i class="fa-sharp fa-regular fa-square-check" style="color:palevioletred;" onclick="showTaskDone(), markAsDone(' + i + ')"></i></td>'
-                                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskDescription'] + "</td>"
-                                + '<td onclick="editTask(' + i + ')">' + storageObjectArr[i]['taskResponsiblePerson'] + "</td>"
-                                + '<td onclick="editTask(' + i + ')">' + date.toUTCString() + '</td>'
-                                + '<td><i class=" fa-solid fa-trash" style="color:palevioletred;" onclick="removetask(' + i + ')"></i></td></tr>';
-                            taskHtml += rowHtml;
-                        }
-                    }
-                }
-            }
-            else {
-                taskHtml = '<tr><td colspan="5">No Tasks Added yet</td></tr>';
-                delayedHtml = '<tr><td colspan="5">No Delayed Tasks</td></tr>';
-            }
-
-            $("#taskTableBody").html(taskHtml);
-            $("#delaytaskTableBody").html(delayedHtml);
-        }
-
-        function completedtask(index, storageObjectArr) {
-            var html = '';
-            if (storageObjectArr && storageObjectArr.length > 0) {
-                var date = new Date(storageObjectArr[index]['taskETA'])
-                html = html + '<tr>'
-                    + '<td >' + storageObjectArr[index]['taskDescription'] + "</td>"
-                    + '<td>' + storageObjectArr[index]['taskResponsiblePerson'] + "</td>"
-                    + '<td>' + date.toUTCString() + '</td>'
-                    + '<td style="color: green;">Completed</td></tr>'
-            }
-            else { html = '<tr><td colspan="5">No Tasks completed yet</td></tr>' }
-            $("#comptaskTableBody").html(html)
-        }
-
-        function markAsDone(index) {
-            var storageObjectArr = [];
-            var storageObject = localStorage.getItem('taskstorage');
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                storageObjectArr = JSON.parse(storageObject);
-                completedtask(index, storageObjectArr)
-                storageObjectArr.pop(index)
-            }
-            localStorage.setItem("taskstorage", JSON.stringify(storageObjectArr))
-            createHtmlfromstorage()
-        }
-
-        function removetask(index) {
-            var storageObjectArr = [];
-            var storageObject = localStorage.getItem('taskstorage');
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                storageObjectArr = JSON.parse(storageObject);
-                storageObjectArr.pop(index)
-            }
-            localStorage.setItem("taskstorage", JSON.stringify(storageObjectArr))
-            createHtmlfromstorage()
-        }
-
-        function editTask(index) {
-            var storageObject = localStorage.getItem('taskstorage');
-            var storageObjectArr = [];
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                storageObjectArr = JSON.parse(storageObject);
-                $("#editTaskTextArea").val(storageObjectArr[index]['taskDescription'])
-                $("#editResponsiblePerson").val(storageObjectArr[index]['taskResponsiblePerson'])
-                $("#editETA").val(storageObjectArr[index]['taskETA'])
-                $("#editIndex").val(index)
-                $("#updateTaskModal").modal("show")
-            }
-        }
-
-        function updateTask() {
-            $("#updateTaskModal").modal("hide")
-            var dataArr = $("#taskupdateForm").serializeArray();
-            var taskobject = new Object();
-            var storageObjectArr = [];
-            var storageObject = localStorage.getItem('taskstorage');
-            for (var i in dataArr) {
-                var name = dataArr[i]['name']
-                var value = dataArr[i]['value']
-                taskobject[name] = value
-            }
-            if (storageObject != null && storageObject != undefined && storageObject != '') {
-                storageObjectArr = JSON.parse(storageObject)
-                storageObjectArr[taskobject['taskIndex']] = taskobject
-            }
-            localStorage.setItem('taskstorage', JSON.stringify(storageObjectArr))
-            createHtmlfromstorage()
-        }
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="To_do_list.js"></script>
 </body>
 
 </html>
