@@ -10,6 +10,13 @@ This project is a fully functional and responsive To-Do List website built using
 5. Task Sections: Navigate through different task categories (ongoing, delayed, and completed) via the navbar.
 6. FontAwesome Integration: Icons used for better visual representation and user interaction.
 7. Modal for Adding Tasks: Add new tasks through a modal interface to keep the main task table clean and organized.
+
+![To Do List - Google Chrome 1_1_2025 10_33_12 PM](https://github.com/user-attachments/assets/603ba1f6-a902-47d8-ac47-bfb2eed24b63)
+![To Do List - Google Chrome 1_1_2025 10_33_33 PM](https://github.com/user-attachments/assets/756b886b-e6f6-4908-868f-471d8c7ec56c)
+![To Do List - Google Chrome 1_1_2025 10_33_44 PM](https://github.com/user-attachments/assets/22a27383-367a-4b47-983d-2b91e067bac7)
+
+**Deployment Link**
+https://workmanagerbyakriti.netlify.app
    
 **Technologies Used**
 1.HTML5: For structuring the website content.
